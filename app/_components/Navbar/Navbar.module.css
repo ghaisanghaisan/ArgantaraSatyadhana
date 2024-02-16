@@ -1,0 +1,89 @@
+.nav {
+	height: var(--navbar-height);
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+	padding: 0 var(--slide-padding-x);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	z-index: 999;
+}
+.nav a {
+	height: 100%;
+}
+
+.nav img {
+	height: var(--navbar-height);
+	width: var(--navbar-height);
+	aspect-ratio: 1;
+}
+
+.navMenuBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(0.6 * var(--navbar-height));
+	width: auto;
+	aspect-ratio: 1;
+	background-color: var(--color-cream);
+	color: var(--color-dark-cream);
+
+	border-radius: 12px;
+
+	padding: 10px;
+
+	cursor: pointer;
+}
+
+.navMenuBtn svg {
+	height: 100%;
+	width: 100%;
+}
+
+.navMenuWrapper {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.45);
+	z-index: 100;
+
+	cursor: pointer;
+	transition: 200ms ease;
+}
+.navMenu {
+	position: absolute;
+	z-index: 101;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 80%;
+	max-width: 600px;
+
+	padding: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	border-left: 3px solid var(--color-dark-cream);
+	background: var(--primary-gradient-background);
+
+	transition: 200ms ease;
+
+	color: white;
+}
+
+.navMenuLinks {
+	margin-top: 6em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 2em;
+}

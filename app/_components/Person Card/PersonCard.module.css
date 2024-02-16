@@ -1,0 +1,52 @@
+.personCard {
+	background: var(--primary-gradient-background);
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 2em;
+
+	text-align: center;
+	border-radius: 12px;
+
+	--image-size: 110px;
+}
+
+.personImage {
+	background-color: var(--color-cream);
+	border-radius: 50%;
+	border: 1px solid var(--color-dark-cream);
+	height: var(--image-size);
+	width: auto;
+	aspect-ratio: 1;
+}
+
+.personCard h1 {
+	width: var(--image-size);
+	text-align: center;
+	color: white;
+
+	font-size: 18px;
+}
+
+.personCard p {
+	width: var(--image-size);
+	text-align: center;
+	color: var(--color-cream);
+
+	font-weight: bold;
+	font-size: 12px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.personCard {
+		--image-size: 150px;
+	}
+
+	.personCard h1 {
+		font-size: 24px;
+	}
+
+	.personCard p {
+		font-size: 16px;
+	}
+}
