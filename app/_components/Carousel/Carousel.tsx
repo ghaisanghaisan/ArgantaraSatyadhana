@@ -6,9 +6,9 @@ import OutButton from "../OutButton";
 export default function Carousel(props: {
 	children: ReactNode;
 	contentInfo: {
-		title: string;
+		nama: string;
 		desc: string;
-		to: string;
+		folderId: string;
 	}[];
 }) {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -46,13 +46,14 @@ export default function Carousel(props: {
 							width: "100%",
 						}}>
 						<div>
-							<h1 className="title">{props.contentInfo[activeIndex].title}</h1>
+							<h1 className="title">{props.contentInfo[activeIndex].nama}</h1>
 
 							<p className="regular" id="dissapearAtMobile">
 								{props.contentInfo[activeIndex].desc}
 							</p>
 						</div>
-						<OutButton to={props.contentInfo[activeIndex].to}>
+						<OutButton
+							to={`gallery/${props.contentInfo[activeIndex].folderId}`}>
 							Gallery
 						</OutButton>
 					</div>

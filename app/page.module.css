@@ -70,26 +70,6 @@
 	justify-content: end;
 }
 
-.leadersWrapper {
-	margin: 0 calc(-1 * var(--slide-padding-x));
-	overflow: visible;
-}
-
-.leaders {
-	padding: 0 24px;
-	display: flex;
-
-	gap: 10px;
-
-	overflow: scroll;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.leaders::-webkit-scrollbar {
-	display: none;
-}
-
 #Proker {
 	background: var(--primary-gradient-background);
 }
@@ -203,12 +183,6 @@
 	flex-direction: column;
 	gap: 10px;
 	color: var(--color-cream);
-}
-
-@media only screen and (min-width: 768px) {
-	.leaders {
-		justify-content: center;
-	}
 }
 
 @media only screen and (min-width: 1280px) {

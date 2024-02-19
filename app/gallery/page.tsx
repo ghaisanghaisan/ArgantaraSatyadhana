@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { MdOutlineSearch, MdNavigateNext } from "react-icons/md";
 
+import DATA_GALLERY from "../_src/DATA_GALLERY";
+
 export default function Gallery() {
 	return (
 		<main>
@@ -14,10 +16,15 @@ export default function Gallery() {
 				</button>
 			</div>
 			<div className={styles.prokerList}>
-				<Link href="/" className={styles.prokerDokum}>
-					<h1 className="title">Hari Guru 2023</h1>
-					<MdNavigateNext className="subtitle" />
-				</Link>
+				{DATA_GALLERY.map((item, index) => (
+					<Link
+						href={`gallery/${item.folderId}`}
+						className={styles.prokerDokum}
+						key={index}>
+						<h1 className="title">{item.nama}</h1>
+						<MdNavigateNext className="subtitle" />
+					</Link>
+				))}
 			</div>
 		</main>
 	);

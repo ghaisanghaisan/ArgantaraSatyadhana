@@ -8,6 +8,8 @@ import Link from "next/link";
 import Carousel from "./_components/Carousel/Carousel";
 import hargur from "@/public/hargur.jpg";
 
+import DATA_GALLERY from "./_src/DATA_GALLERY";
+
 function ProkerButton(props: {
 	name: string;
 	description: string;
@@ -42,19 +44,7 @@ export default function Home({}) {
 						<OutButton to="/about">Learn More</OutButton>
 					</div>
 				</div>
-				<Carousel
-					contentInfo={[
-						{
-							title: "Hari Guru",
-							desc: "lorem20",
-							to: "/gallery/hari-guru-2024",
-						},
-						{
-							title: "Class Meeting",
-							desc: "classmeeting",
-							to: "/gallery/classmeeting-2023",
-						},
-					]}>
+				<Carousel contentInfo={DATA_GALLERY}>
 					<Image src={hargur} alt="adf" />
 					<Image src={hargur} alt="adf" />
 				</Carousel>
@@ -85,8 +75,8 @@ export default function Home({}) {
 					<h2 className="subtitle">Our Team</h2>
 					<h1 className="title">LEADERS</h1>
 				</div>
-				<div className={styles.leadersWrapper}>
-					<div className={styles.leaders}>
+				<div className="personCardListWrapper">
+					<div className="personCardList">
 						<PersonCard nama="Muhammad Alfiansyah" jabatan="Ketua OSIS" />
 						<PersonCard nama="Naysilla Namira" jabatan="Ketua MPK" />
 						<PersonCard nama="Altius Vieddy" jabatan="Wakil Ketua OSIS" />
