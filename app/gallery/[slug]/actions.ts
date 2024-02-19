@@ -4,7 +4,7 @@ import { getPhotos } from "../../_src/GALLERYVIEW";
 
 export async function fetchPhotos(
 	folderId: string,
-	pageToken?: string | undefined | null
+	pageToken?: string | undefined
 ) {
 	const data = await getPhotos(folderId, pageToken);
 

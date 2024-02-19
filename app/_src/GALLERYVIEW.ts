@@ -8,7 +8,7 @@ const auth = new google.auth.GoogleAuth({
 
 export const getPhotos = async (
 	folderId: string,
-	pageToken?: string | undefined | null
+	pageToken?: string | undefined
 ) => {
 	// allows you to use drive API methods e.g. listing files, creating files.
 	const drive = google.drive({ version: "v3", auth });

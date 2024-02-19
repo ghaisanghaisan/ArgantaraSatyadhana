@@ -16,7 +16,7 @@ export default async function GalleryView({
 			<InfiniteScrollGallery
 				params={params}
 				initialPhotos={initialData.photos}
-				initialPage={initialData.nextPageToken}
+				initialPage={initialData.nextPageToken ? initialData.nextPageToken : ""}
 			/>
 		</main>
 	);
