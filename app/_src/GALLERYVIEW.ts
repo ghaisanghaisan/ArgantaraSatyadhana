@@ -1,8 +1,9 @@
 import { google } from "googleapis";
 
 // authenticates the service account to be used in this context
-const auth = new google.auth.GoogleAuth({
-	keyFile: process.cwd() + "/credentials.json",
+const auth = new google.auth.JWT({
+	email: process.env.client_email,
+	key: process.env.private_key!.replace(/\\n/g, "\n"),
 	scopes: ["https://www.googleapis.com/auth/drive"],
 });
 
