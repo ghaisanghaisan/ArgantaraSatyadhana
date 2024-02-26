@@ -5,6 +5,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 3em;
+
+	padding-bottom: 4em;
 }
 
 .structure > h1 {
@@ -34,9 +36,9 @@
 }
 
 .structureCard {
-	min-width: 380px;
-
-	max-width: 100%;
+	position: relative;
+	flex-shrink: 0;
+	width: 80vw;
 	height: 250px;
 
 	border-radius: 12px;
@@ -48,11 +50,14 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	overflow: hidden;
 }
 
 .structureCard img {
+	position: absolute;
 	right: 0;
-	top: 0;
+	z-index: 0;
 	height: 80%;
 	width: auto;
 	aspect-ratio: 1;
@@ -65,11 +70,14 @@
 }
 
 .structureCardInfo > h2 {
+	/* white-space: nowrap; */
 	color: var(--color-cream);
 }
 
 .structureCardInfo {
+	z-index: 1;
 	height: 100%;
+	width: 80%;
 
 	padding: 2em;
 
@@ -78,9 +86,21 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
-/* 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (min-width: 768px) {
 	.structureCard {
-		width: 400px;
+		min-width: 500px;
+		width: 500px;
+		max-width: 500px;
 	}
-} */
+
+	.structureCardInfo {
+		width: 60%;
+	}
+
+	.structureCard img {
+		height: auto;
+		width: 50%;
+		aspect-ratio: 1;
+	}
+}

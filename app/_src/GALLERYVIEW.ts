@@ -31,3 +31,22 @@ export const getPhotos = async (
 		return null;
 	}
 };
+
+export const getPhotosHead = async () => {
+	const drive = google.drive({ version: "v3", auth });
+	try {
+		const res = await drive.files.list({
+			fields: "files(thumbnailLink, mimeType, id, webViewLink), nextPageToken",
+			pageSize: 12,
+		});
+		const files = {
+			files: res.data.files,
+			nextPageToken: res.data.nextPageToken,
+		};
+
+		return files;
+	} catch (error: any) {
+		console.error("Error fetching files:", error.message);
+		return null;
+	}
+};

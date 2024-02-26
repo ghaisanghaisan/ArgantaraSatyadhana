@@ -13,8 +13,9 @@ const DATA_STRUKTUR: STRUKTUR = {
 	"komisi-a": {
 		nama: "Komisi A",
 		seksiDesc: "",
-		alias: "",
-		lambidDesc: "",
+		alias: "chorís diakríseis",
+		lambidDesc:
+			"Owl of Athena: Lambang pengetahuan, kebijaksanaan, dan kecerdasan. Desain logo menampilkan buku di tengah dada yang menggenggam spanduk dengan tulisan 'χωρίς διακρίσεις' (chorís diakríseis) yang berarti 'tanpa pandang bulu'. Motto utama di dalam buku, 'κρινω' (krino), memperingatkan untuk memisahkan dengan bijaksana dalam pengambilan keputusan.",
 		ketua: "Muhamad Bintang",
 		anggota: ["Arsyameitha Wizahra", "Radinda Aurellia"],
 	},
@@ -22,20 +23,22 @@ const DATA_STRUKTUR: STRUKTUR = {
 		nama: "Komisi B",
 		seksiDesc: "",
 		alias: "",
-		lambidDesc: "",
+		lambidDesc:
+			"Sphinx (versi Yunani) berhadapan dengan dewi Themis yang menempati posisi lebih tinggi, memegang pedang di atas kepala sphinx. Melambangkan dialog antara kebijaksanaan dan keadilan, dengan sphinx sebagai simbol misteri dan Themis sebagai perwujudan hukum dan keteraturan.",
 		ketua: "Trisha Calista",
 		anggota: ["Rama Afriza", "Kinara Syahla", "Danke Athaya"],
 	},
 	"komisi-c": {
 		nama: "Komisi C",
 		seksiDesc: "",
-		alias: "",
-		lambidDesc: "",
+		alias: "Epitychies",
+		lambidDesc:
+			"Hydra melingkari buku terbuka dengan terompet kerang di tengah, berisi koin sebagai simbol Tyche. Nama komisi 'Epitychies' (kesuksesan) terinspirasi dari dewi Yunani Tyche, mewakili evaluasi kesuksesan acara untuk meningkatkan kesuksesan acara mendatang.",
 		ketua: "Muhammad Hani’Arkan",
 		anggota: ["Muhammad Nasya", "Najla Salsabila", "Sofia Alaydrus"],
 	},
 	"sekbid-i": {
-		nama: "Sekbid I",
+		nama: "Sekbid 1",
 		seksiDesc: "Keimanan dan Ketakwaan Terhadap Tuhan Yang Maha Esa",
 		alias: "DEVASHISH",
 		lambidDesc:
@@ -114,7 +117,8 @@ const DATA_STRUKTUR: STRUKTUR = {
 		nama: "Sekbid 9",
 		seksiDesc: "Teknologi Informasi dan Komunikasi",
 		alias: "OBSCURA",
-		lambidDesc: "",
+		lambidDesc:
+			"Obscura berarti ruangan yang memproyeksikan gambar secara terbalik dari arah lensanya, melambangkan bahwa SEKBID IX sebagai ruang untuk menyimpan dokumentasi. Pada lambang terdapat gurita yang memiliki banyak lengan melambangkan keharusan SEKBID IX untuk bekerja secara efisien dan produktif. Elemen lain seperti kamera dan gawai merupakan alat yang digunakan dalam pengerjaan tugas.",
 		ketua: "Danish Ghaisan",
 		anggota: ["Naaila Nabila", "Abdul Qadir", "Hasna Naeela", "Jaksely Nadin"],
 	},
@@ -130,16 +134,18 @@ const DATA_STRUKTUR: STRUKTUR = {
 	"bendahara-mpk": {
 		nama: "Bendahara MPK",
 		seksiDesc: "",
-		alias: "",
-		lambidDesc: "",
+		alias: "Obscura Chrysos",
+		lambidDesc:
+			"La Obscura Chrysos: Logo menggambarkan Gorgon dalam konteks pertambangan, bertamengkan baju zirah emas untuk pertahanan kekayaan. 'La Obscura' dari bahasa Italia berarti 'Ruang Gelap', merujuk pada keamanan filosofis dalam 'Chrysos' (kekayaan). Berlatar belakang ruang kaca dengan ornamen ular, melambangkan penyimpanan dan kewaspadaan terhadap kekayaan.",
 		ketua: "Luna Kalea",
 		anggota: [],
 	},
 	"sekretaris-mpk": {
 		nama: "Sekretaris MPK",
 		seksiDesc: "",
-		alias: "",
-		lambidDesc: "",
+		alias: "Athena Nester",
+		lambidDesc:
+			"Logo menampilkan Dewi Athena menunggang Pegasus dengan latar belakang jam, timbangan, dan kertas tua. Tulisan Athena Nester menunjukkan Athena sebagai petualang cerdas yang berani. Pegasus dan Athena melambangkan petualangan dan kebijaksanaan, sementara jam, timbangan, dan kertas tua mencerminkan sejarah dan pengetahuan yang diperoleh.",
 		ketua: "Safa Nailatul",
 		anggota: ["Kayla Fatmala"],
 	},
@@ -172,12 +178,12 @@ const DATA_STRUKTUR: STRUKTUR = {
 };
 
 const LIST_DATA_STRUKTUR = {
-	mpk: [
+	bphMPK: [
 		{
 			slug: "bendahara-mpk",
 			nama: "Bendahara MPK",
 			seksiDesc: "",
-			alias: "",
+			alias: "Obscura Chrysos",
 			lambidDesc: "",
 			ketua: "Luna Kalea",
 			anggota: [],
@@ -186,17 +192,20 @@ const LIST_DATA_STRUKTUR = {
 			slug: "sekretaris-mpk",
 			nama: "Sekretaris MPK",
 			seksiDesc: "",
-			alias: "",
+			alias: "Athena Nester",
 			lambidDesc: "",
 			ketua: "Safa Nailatul",
 			anggota: ["Kayla Fatmala"],
 		},
+	],
+	komMPK: [
 		{
 			slug: "komisi-a",
 			nama: "Komisi A",
 			seksiDesc: "",
-			alias: "",
-			lambidDesc: "",
+			alias: "Chorís Diakríseis",
+			lambidDesc:
+				"Owl of Athena: Lambang pengetahuan, kebijaksanaan, dan kecerdasan. Desain logo menampilkan buku di tengah dada yang menggenggam spanduk dengan tulisan 'χωρίς διακρίσεις' (chorís diakríseis) yang berarti 'tanpa pandang bulu'. Motto utama di dalam buku, 'κρινω' (krino), memperingatkan untuk memisahkan dengan bijaksana dalam pengambilan keputusan.",
 			ketua: "Muhamad Bintang",
 			anggota: ["Arsyameitha Wizahra", "Radinda Aurellia"],
 		},
@@ -204,8 +213,9 @@ const LIST_DATA_STRUKTUR = {
 			slug: "komisi-b",
 			nama: "Komisi B",
 			seksiDesc: "",
-			alias: "",
-			lambidDesc: "",
+			alias: "Eponyarch",
+			lambidDesc:
+				"Sphinx (versi Yunani) berhadapan dengan dewi Themis yang menempati posisi lebih tinggi, memegang pedang di atas kepala sphinx. Melambangkan dialog antara kebijaksanaan dan keadilan, dengan sphinx sebagai simbol misteri dan Themis sebagai perwujudan hukum dan keteraturan.",
 			ketua: "Trisha Calista",
 			anggota: ["Rama Afriza", "Kinara Syahla", "Danke Athaya"],
 		},
@@ -213,13 +223,14 @@ const LIST_DATA_STRUKTUR = {
 			slug: "komisi-c",
 			nama: "Komisi C",
 			seksiDesc: "",
-			alias: "",
-			lambidDesc: "",
+			alias: "Epitychies",
+			lambidDesc:
+				"Hydra melingkari buku terbuka dengan terompet kerang di tengah, berisi koin sebagai simbol Tyche. Nama komisi 'Epitychies' (kesuksesan) terinspirasi dari dewi Yunani Tyche, mewakili evaluasi kesuksesan acara untuk meningkatkan kesuksesan acara mendatang.",
 			ketua: "Muhammad Hani’Arkan",
 			anggota: ["Muhammad Nasya", "Najla Salsabila", "Sofia Alaydrus"],
 		},
 	],
-	bph: [
+	bphOSIS: [
 		{
 			slug: "bendahara-osis",
 			nama: "Bendahara OSIS",
@@ -250,10 +261,10 @@ const LIST_DATA_STRUKTUR = {
 			anggota: ["Salsabila Khoosyi", "Muhammad Fauzan", "Nadine Angelica"],
 		},
 	],
-	osis: [
+	sekbidOSIS: [
 		{
 			slug: "sekbid-i",
-			nama: "Sekbid I",
+			nama: "Sekbid 1",
 			seksiDesc: "Keimanan & Ketakwaan Tuhan Maha Esa",
 			alias: "DEVASHISH",
 			lambidDesc:

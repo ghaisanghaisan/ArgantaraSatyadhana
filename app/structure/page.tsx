@@ -11,11 +11,13 @@ const StructureCard = ({
 	desc,
 	alias,
 	to,
+	lambid,
 }: {
 	name: string;
 	desc: string;
 	alias: string;
 	to: string;
+	lambid?: string;
 }) => {
 	return (
 		<Link className={styles.structureCard} href={to}>
@@ -27,7 +29,7 @@ const StructureCard = ({
 				<h2>{alias}</h2>
 			</div>
 
-			<Image src={logo} alt="logo" />
+			<Image src={lambid ? lambid : logo} alt="logo" width={900} height={900} />
 		</Link>
 	);
 };
@@ -38,13 +40,36 @@ export default function Structure() {
 			<h1 className="title">MPK</h1>
 			<div className={styles.structureSlidesWrapper}>
 				<div className={styles.structureSlides}>
-					{LIST_DATA_STRUKTUR.mpk.map((item, index) => (
+					<StructureCard
+						name="Pimpinan MPK"
+						desc=""
+						alias="URANUS ARCHON"
+						to={`structure/pimpinan-mpk`}
+						lambid="/lambid/BPH/KETUMPK.png"
+						key={99}
+					/>
+					{LIST_DATA_STRUKTUR.bphMPK.map((item, index) => (
 						<StructureCard
 							name={item.nama}
 							desc={item.seksiDesc}
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
+							lambid={`/lambid/${item.nama}.PNG`}
+						/>
+					))}
+				</div>
+			</div>
+			<div className={styles.structureSlidesWrapper}>
+				<div className={styles.structureSlides}>
+					{LIST_DATA_STRUKTUR.komMPK.map((item, index) => (
+						<StructureCard
+							name={item.nama}
+							desc={item.seksiDesc}
+							alias={item.alias}
+							to={`structure/${item.slug}`}
+							key={index}
+							lambid={`/lambid/${item.nama}.PNG`}
 						/>
 					))}
 				</div>
@@ -52,26 +77,50 @@ export default function Structure() {
 			<h1 className="title">OSIS</h1>
 			<div className={styles.structureSlidesWrapper}>
 				<div className={styles.structureSlides}>
-					{LIST_DATA_STRUKTUR.bph.map((item, index) => (
+					<StructureCard
+						name="Pimpinan OSIS"
+						desc=""
+						alias="IMPERIUS REX & CONSUL"
+						to={`structure/pimpinan-osis`}
+						lambid="/lambid/BPH/KETOS.png"
+						key={99}
+					/>
+					{LIST_DATA_STRUKTUR.bphOSIS.map((item, index) => (
 						<StructureCard
 							name={item.nama}
 							desc={item.seksiDesc}
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
+							lambid={`/lambid/${item.nama}.PNG`}
 						/>
 					))}
 				</div>
 			</div>
 			<div className={styles.structureSlidesWrapper}>
 				<div className={styles.structureSlides}>
-					{LIST_DATA_STRUKTUR.osis.map((item, index) => (
+					{LIST_DATA_STRUKTUR.sekbidOSIS.slice(0, 5).map((item, index) => (
 						<StructureCard
 							name={item.nama}
 							desc={item.seksiDesc}
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
+							lambid={`/lambid/${item.nama}.PNG`}
+						/>
+					))}
+				</div>
+			</div>
+			<div className={styles.structureSlidesWrapper}>
+				<div className={styles.structureSlides}>
+					{LIST_DATA_STRUKTUR.sekbidOSIS.slice(5).map((item, index) => (
+						<StructureCard
+							name={item.nama}
+							desc={item.seksiDesc}
+							alias={item.alias}
+							to={`structure/${item.slug}`}
+							key={index}
+							lambid={`/lambid/${item.nama}.PNG`}
 						/>
 					))}
 				</div>

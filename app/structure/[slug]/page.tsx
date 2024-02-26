@@ -11,7 +11,12 @@ export default function Structure({ params }: { params: { slug: string } }) {
 	if (data) {
 		return (
 			<div className={styles.structure}>
-				<Image src={LOGO} alt="LOGO" />
+				<Image
+					src={`/lambid/${data.nama}.PNG`}
+					alt="LOGO"
+					height="900"
+					width="900"
+				/>
 				<div className={styles.structureTitle}>
 					<h1 className="title">{data.nama}</h1>
 					<h2 className="subtitle">{data.seksiDesc}</h2>

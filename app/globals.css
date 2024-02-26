@@ -39,6 +39,7 @@ main {
 
 body {
 	background-color: var(--color-dirty-white);
+	overflow-x: hidden;
 }
 
 .title {
@@ -97,8 +98,36 @@ body {
 	scrollbar-width: none;
 }
 
-.peresonCardList::-webkit-scrollbar {
+.personCardList::-webkit-scrollbar {
 	display: none;
+}
+
+.galleryPhoto {
+	height: 200px;
+	width: auto;
+	aspect-ratio: 1;
+
+	background-color: #d9d9d9;
+	border: 1px solid black;
+}
+
+.galleryPhoto img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+	.galleryPhoto {
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.galleryPhoto {
+		height: 80px;
+	}
 }
 
 @media only screen and (min-width: 768px) {

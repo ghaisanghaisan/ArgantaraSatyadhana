@@ -8,16 +8,28 @@ import Link from "next/link";
 import Carousel from "./_components/Carousel/Carousel";
 import hargur from "@/public/hargur.jpg";
 
+import SCOPELLA from "@/public/SCOPELLA.jpg";
+import PETRICALS from "@/public/PETRICALS.png";
+import SMAN from "@/public/SMAN55.png";
+
 import DATA_GALLERY from "./_src/DATA_GALLERY";
+import { fetchPhotos } from "./actions";
+import { useEffect, useState } from "react";
+import { drive_v3 } from "googleapis";
 
 function ProkerButton(props: {
 	name: string;
 	description: string;
 	img: StaticImageData;
 	to: string;
+	id?: string;
 }) {
 	return (
-		<Link href={props.to} className={styles.ProkerButton} target="_blank">
+		<Link
+			href={props.to}
+			className={styles.ProkerButton}
+			target="_blank"
+			id={props.id}>
 			<div className={styles.ProkerDesc}>
 				<h1 className="subtitle">{props.name}</h1>
 				<h2 className="regular">{props.description}</h2>
@@ -27,6 +39,17 @@ function ProkerButton(props: {
 	);
 }
 export default function Home({}) {
+	const [photos, setPhotos] = useState<drive_v3.Schema$File[] | undefined>([]);
+	useEffect(() => {
+		const fetch = async () => {
+			const photoHead = await fetchPhotos();
+
+			setPhotos(photoHead);
+		};
+
+		fetch();
+	});
+
 	return (
 		<main>
 			<div className={styles.hero}>
@@ -36,17 +59,23 @@ export default function Home({}) {
 						<h1 className="title">STUDENT COUNCIL</h1>
 					</div>
 					<p className="body">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatibus, itaque eveniet eaque id ad beatae nam doloribus atque
-						quis reprehenderit!
+						Semangat tanpa batas, <br /> Profesionalitas, <br />
+						serta jujur dan berani.
 					</p>
 					<div className={styles.infoLink} id={styles.start}>
 						<OutButton to="/about">Learn More</OutButton>
 					</div>
 				</div>
 				<Carousel contentInfo={DATA_GALLERY}>
-					<Image src={hargur} alt="adf" />
-					<Image src={hargur} alt="adf" />
+					{DATA_GALLERY.map((item, index) => (
+						<Image
+							src={`/gallery/${item.nama}.jpg`}
+							alt={item.nama}
+							width={1920}
+							height={1080}
+							key={index}
+						/>
+					))}
 				</Carousel>
 			</div>
 			<div className={styles.page_slide}>
@@ -59,12 +88,11 @@ export default function Home({}) {
 					</h1>
 				</div>
 				<p className="body">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo nam,
-					magni consequatur dolorum eos alias impedit, ratione facere
-					reprehenderit incidunt quam aliquam maiores quasi voluptatem id
-					ducimus velit error vel quaerat ab ipsa qui itaque. Minus saepe
-					corrupti velit quae quod quos illum officia suscipit reiciendis
-					facere, nisi blanditiis error!
+					Kami memiliki tujuan mulia untuk mendukung semangat kebersamaan dan
+					kebijakan yang kokoh di antara siswa SMAN 55 Jakarta. Melalui kegiatan
+					OSIS/MPK, kami berkomitmen untuk memperkaya keterampilan, meningkatkan
+					disiplin, serta mengembangkan aspek spiritual siswa demi mencapai
+					kemajuan yang berkelanjutan.
 				</p>
 				<div className={styles.infoLink} id={styles.end}>
 					<OutButton to="/about">Learn More</OutButton>
@@ -96,21 +124,34 @@ export default function Home({}) {
 				<div className={styles.ProkerList}>
 					<ProkerButton
 						name="Podcast"
-						description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
+						description="Isi mendalam tentang yang sedang terjadi di SMAN 55!
+						"
 						img={LLFM}
 						to="https://www.spotify.com"
 					/>
 					<ProkerButton
-						name="Podcast"
-						description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
-						img={LLFM}
-						to="spotify.com"
+						name="Instagram"
+						description="Akun instagram milik MPK/OSIS SMAN 55!
+						"
+						img={SMAN}
+						to="https://www.instagram.com/mpkosis55/"
+						id={styles.INSTAGRAM}
 					/>
 					<ProkerButton
-						name="Podcast"
-						description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
-						img={LLFM}
-						to="spotify.com"
+						name="Petricals"
+						description="Drama musical ala ala anak SMA!
+						"
+						img={PETRICALS}
+						to="https://www.instagram.com/petricals/"
+						id={styles.PETRICALS}
+					/>
+					<ProkerButton
+						name="Scopella"
+						description="Sport Competion bergengsi antar SMA/SMP sederajat!
+						"
+						img={SCOPELLA}
+						to="https://www.instagram.com/scopella2024/"
+						id={styles.SCOPELLA}
 					/>
 				</div>
 			</div>
@@ -119,21 +160,20 @@ export default function Home({}) {
 					<h2 className="subtitle">Check Out</h2>
 					<h1 className="title">Our Gallery</h1>
 				</div>
-				<div className={styles.galleryGridWrapper}>
-					<div className={styles.galleryGrid}>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-						<div className={styles.galleryPhoto}></div>
-					</div>
+				<div className={styles.galleryGrid}>
+					{photos!.map((item, index) => (
+						<Link
+							key={index}
+							href={item.webViewLink ? item.webViewLink : ""}
+							className="galleryPhoto">
+							<Image
+								src={item.thumbnailLink ? item.thumbnailLink : ""}
+								alt="Foto Dokumentasi"
+								width="300"
+								height="300"
+							/>
+						</Link>
+					))}
 				</div>
 				<div
 					className={styles.infoLink}
@@ -167,8 +207,11 @@ export default function Home({}) {
 					</p>
 					<p className="light">
 						Email: mpkosis.sman55@gmail.com <br />
-						LINE: <br />
-						WhatsApp:
+						Instagram: @mpkosis55 <br />
+						<br />
+						LINE (MPK): haniiarkan
+						<br />
+						LINE (OSIS): velyn280307
 					</p>
 				</div>
 			</div>

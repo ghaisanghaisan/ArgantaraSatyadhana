@@ -29,6 +29,17 @@
 	aspect-ratio: 1;
 }
 
+.pimpinan {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.pimpinan img {
+	height: 50%;
+}
+
 @media only screen and (min-width: 768px) {
 	.structure img {
 		width: 40%;

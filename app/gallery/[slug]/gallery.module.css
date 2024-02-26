@@ -19,31 +19,3 @@
 	align-items: center;
 	justify-content: center;
 }
-
-.galleryPhoto {
-	height: 200px;
-	width: auto;
-	aspect-ratio: 1;
-
-	background-color: #d9d9d9;
-	border: 1px solid black;
-}
-
-.galleryPhoto img {
-	width: 100%;
-	height: 100%;
-
-	object-fit: cover;
-}
-
-@media only screen and (max-width: 768px) {
-	.galleryPhoto {
-		height: 100px;
-	}
-}
-
-@media only screen and (max-width: 350px) {
-	.galleryPhoto {
-		height: 80px;
-	}
-}

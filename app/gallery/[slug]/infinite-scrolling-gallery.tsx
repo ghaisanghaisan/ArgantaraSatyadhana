@@ -13,7 +13,7 @@ function GalleryPhoto({ photo }: { photo: drive_v3.Schema$File }) {
 	return (
 		<Link
 			href={photo.webViewLink ? photo.webViewLink : ""}
-			className={styles.galleryPhoto}>
+			className="galleryPhoto">
 			<Image
 				src={photo.thumbnailLink ? photo.thumbnailLink : ""}
 				alt="Foto Dokumentasi"
@@ -51,9 +51,10 @@ export default function InfiniteScrollGallery({
 		]);
 		setPage(newData.nextPageToken ? newData.nextPageToken : "");
 	};
+
 	useEffect(() => {
 		loadMorePages();
-	}, [inView]);
+	}, [inView, loadMorePages]);
 
 	return (
 		<main className={styles.gallery}>

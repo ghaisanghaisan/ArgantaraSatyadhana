@@ -112,7 +112,7 @@
 }
 
 .ProkerDesc {
-	width: 100%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
@@ -120,8 +120,8 @@
 }
 
 .ProkerButton > img {
-	width: 100%;
-	height: 100%;
+	width: 50%;
+	aspect-ratio: 1;
 
 	object-fit: scale-down;
 }
@@ -130,6 +130,26 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+}
+#INSTAGRAM {
+	background: #95252b;
+}
+
+#PETRICALS {
+	background: #c42b12;
+}
+
+#PETRICALS h1,
+#PETRICALS h2 {
+	color: #f3bb51;
+}
+
+#SCOPELLA {
+	background: #8fbf51;
+}
+#SCOPELLA h1,
+#SCOPELLA h2 {
+	color: #721b00;
 }
 
 #Gallery {
