@@ -41,20 +41,19 @@ export default function InfiniteScrollGallery({
 		drive_v3.Schema$File[] | null | undefined
 	>(initialPhotos);
 
-	const loadMorePages = async () => {
-		console.log(page);
-		const newData = await fetchPhotos(params.slug, page);
-
-		setPhotoList((prev) => [
-			...(prev ? prev : []),
-			...(newData.photos ? newData.photos : []),
-		]);
-		setPage(newData.nextPageToken ? newData.nextPageToken : "");
-	};
-
 	useEffect(() => {
+		const loadMorePages = async () => {
+			console.log(page);
+			const newData = await fetchPhotos(params.slug, page);
+
+			setPhotoList((prev) => [
+				...(prev ? prev : []),
+				...(newData.photos ? newData.photos : []),
+			]);
+			setPage(newData.nextPageToken ? newData.nextPageToken : "");
+		};
 		loadMorePages();
-	}, [inView, loadMorePages]);
+	}, [inView]);
 
 	return (
 		<main className={styles.gallery}>
