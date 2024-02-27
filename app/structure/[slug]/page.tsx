@@ -14,8 +14,8 @@ export default function Structure({ params }: { params: { slug: string } }) {
 				<Image
 					src={`/lambid/${data.nama}.PNG`}
 					alt="LOGO"
-					height="900"
-					width="900"
+					height="2048"
+					width="2048"
 				/>
 				<div className={styles.structureTitle}>
 					<h1 className="title">{data.nama}</h1>
