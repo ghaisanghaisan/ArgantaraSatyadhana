@@ -19,6 +19,7 @@ function GalleryPhoto({ photo }: { photo: drive_v3.Schema$File }) {
 				alt="Foto Dokumentasi"
 				width="300"
 				height="300"
+				unoptimized
 			/>
 		</Link>
 	);
