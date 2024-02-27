@@ -37,9 +37,9 @@ export default function Navbar() {
 					<Link className="subtitle" href="/">
 						Home
 					</Link>
-					<Link className="subtitle" href="/about">
+					{/* <Link className="subtitle" href="/about">
 						About
-					</Link>
+					</Link> */}
 					<Link className="subtitle" href="/structure">
 						Structure
 					</Link>

@@ -35,6 +35,8 @@ main {
 	position: relative;
 	overflow-y: hidden;
 	z-index: 0;
+
+	scroll-behavior: smooth;
 }
 
 body {

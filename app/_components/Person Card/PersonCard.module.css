@@ -6,6 +6,7 @@
 	padding: 2em;
 
 	text-align: center;
+	align-items: center;
 	border-radius: 12px;
 
 	--image-size: 110px;
@@ -16,8 +17,18 @@
 	border-radius: 50%;
 	border: 1px solid var(--color-dark-cream);
 	height: var(--image-size);
-	width: auto;
-	aspect-ratio: 1;
+	width: var(--image-size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+}
+
+.personImage img {
+	width: 100%;
+	height: auto;
+	transform: translateY(10%);
 }
 
 .personCard h1 {

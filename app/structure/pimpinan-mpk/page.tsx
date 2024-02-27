@@ -30,8 +30,16 @@ export default function Structure({ params }: { params: { slug: string } }) {
 			</p>
 			<div className="personCardListWrapper">
 				<div className="personCardList">
-					<PersonCard nama="Naysilla Namira" jabatan="Ketua MPK" />
-					<PersonCard nama="Ardeshir Hammurabi" jabatan="Wakil Ketua MPK" />
+					<PersonCard
+						nama="Naysilla Namira"
+						jabatan="Ketua MPK"
+						foto="/struktur/Naysilla Namira.png"
+					/>
+					<PersonCard
+						nama="Ardeshir Hammurabi"
+						jabatan="Wakil Ketua MPK"
+						foto="/struktur/Ardeshir Hammurabi.png"
+					/>
 				</div>
 			</div>
 		</div>

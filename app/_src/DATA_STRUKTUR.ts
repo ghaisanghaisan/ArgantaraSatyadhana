@@ -43,8 +43,8 @@ const DATA_STRUKTUR: STRUKTUR = {
 		alias: "DEVASHISH",
 		lambidDesc:
 			'Devashish memiliki arti "berkat dari Allah." Dalam hal ini, kita sebagai umat beragama ditujukan menjadi orang yang selalu kembali kepada Tuhan YME karena semua nikmat yang kita dapatkan berasal dari-Nya. Sosok perempuan di tengah melambangkan sebagai setiap individu harus dijaga, dengan hak-hak yang dijamin oleh ajaran agama. Biru muda sebagai warna utama melambangkan perasaan ketenangan dan kesejukan jiwa serta pikiran. Lumba-lumba memiliki arti kemurnian hati, perlindungan dan keselamatan, yang akan didapatkan apabila ia dekat dengan Tuhan. Ombak dikaitkan dengan perasaan mengalir. dalam setiap agama yang ada, kita punya Tuhan yang menjadi tempat kita menyalurkan apapun yang ingin disampaikan. ia mengalir saja seperti ombak hingga akhirnya perasaan kita dapat menjadi tenang kembali',
-		ketua: "Unzurna Rahiel Azada",
-		anggota: ["Ahmad Rizky Amri", "Dionysius Emmanuel", "Jihan Nisrina"],
+		ketua: "Unzurna Rahiel",
+		anggota: ["Ahmad Rizky", "Dionysius Emmanuel", "Jihan Nisrina"],
 	},
 	"sekbid-ii": {
 		nama: "Sekbid 2",
@@ -269,8 +269,8 @@ const LIST_DATA_STRUKTUR = {
 			alias: "DEVASHISH",
 			lambidDesc:
 				'Devashish memiliki arti "berkat dari Allah." Dalam hal ini, kita sebagai umat beragama ditujukan menjadi orang yang selalu kembali kepada Tuhan YME karena semua nikmat yang kita dapatkan berasal dari-Nya. Sosok perempuan di tengah melambangkan sebagai setiap individu harus dijaga, dengan hak-hak yang dijamin oleh ajaran agama. Biru muda sebagai warna utama melambangkan perasaan ketenangan dan kesejukan jiwa serta pikiran. Lumba-lumba memiliki arti kemurnian hati, perlindungan dan keselamatan, yang akan didapatkan apabila ia dekat dengan Tuhan. Ombak dikaitkan dengan perasaan mengalir. dalam setiap agama yang ada, kita punya Tuhan yang menjadi tempat kita menyalurkan apapun yang ingin disampaikan. ia mengalir saja seperti ombak hingga akhirnya perasaan kita dapat menjadi tenang kembali',
-			ketua: "Unzurna Rahiel Azada",
-			anggota: ["Ahmad Rizky Amri", "Dionysius Emmanuel", "Jihan Nisrina"],
+			ketua: "Unzurna Rahiel",
+			anggota: ["Ahmad Rizky", "Dionysius Emmanuel", "Jihan Nisrina"],
 		},
 		{
 			slug: "sekbid-ii",

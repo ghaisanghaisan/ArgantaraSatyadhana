@@ -63,7 +63,7 @@ export default function Home({}) {
 						serta jujur dan berani.
 					</p>
 					<div className={styles.infoLink} id={styles.start}>
-						<OutButton to="/about">Learn More</OutButton>
+						<OutButton to="#info">Learn More</OutButton>
 					</div>
 				</div>
 				<Carousel contentInfo={DATA_GALLERY}>
@@ -80,7 +80,9 @@ export default function Home({}) {
 			</div>
 			<div className={styles.page_slide}>
 				<div className={styles.page_title}>
-					<h2 className="subtitle">We Are</h2>
+					<h2 className="subtitle" id="info">
+						We Are
+					</h2>
 					<h1 className="title">
 						ARGANTARA
 						<br />
@@ -95,7 +97,7 @@ export default function Home({}) {
 					kemajuan yang berkelanjutan.
 				</p>
 				<div className={styles.infoLink} id={styles.end}>
-					<OutButton to="/about">Learn More</OutButton>
+					{/* <OutButton to="/about">Learn More</OutButton> */}
 				</div>
 			</div>
 			<div className={styles.page_slide}>
@@ -105,10 +107,26 @@ export default function Home({}) {
 				</div>
 				<div className="personCardListWrapper">
 					<div className="personCardList">
-						<PersonCard nama="Muhammad Alfiansyah" jabatan="Ketua OSIS" />
-						<PersonCard nama="Naysilla Namira" jabatan="Ketua MPK" />
-						<PersonCard nama="Altius Vieddy" jabatan="Wakil Ketua OSIS" />
-						<PersonCard nama="Ardeshir Hammurabi" jabatan="Wakil Ketua MPK" />
+						<PersonCard
+							nama="Muhammad Alfiansyah"
+							jabatan="Ketua OSIS"
+							foto="/struktur/Muhammad Alfiansyah.png"
+						/>
+						<PersonCard
+							nama="Naysilla Namira"
+							jabatan="Ketua MPK"
+							foto="/struktur/Naysilla Namira.png"
+						/>
+						<PersonCard
+							nama="Altius Vieddy"
+							jabatan="Wakil Ketua OSIS"
+							foto="/struktur/Altius Vieddy.png"
+						/>
+						<PersonCard
+							nama="Ardeshir Hammurabi"
+							jabatan="Wakil Ketua MPK"
+							foto="/struktur/Ardeshir Hammurabi.png"
+						/>
 					</div>
 				</div>
 				<div className={styles.infoLink}>
@@ -171,6 +189,7 @@ export default function Home({}) {
 								alt="Foto Dokumentasi"
 								width="300"
 								height="300"
+								unoptimized
 							/>
 						</Link>
 					))}
@@ -189,9 +208,9 @@ export default function Home({}) {
 					<Link className="light" href="/">
 						Home
 					</Link>
-					<Link className="light" href="/about">
+					{/* <Link className="light" href="/about">
 						About
-					</Link>
+					</Link> */}
 					<Link className="light" href="/structure">
 						Structure
 					</Link>

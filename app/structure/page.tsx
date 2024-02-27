@@ -55,7 +55,7 @@ export default function Structure() {
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
-							lambid={`/lambid/${item.nama}.PNG`}
+							lambid={`/lambid/${item.nama}.png`}
 						/>
 					))}
 				</div>
@@ -69,7 +69,7 @@ export default function Structure() {
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
-							lambid={`/lambid/${item.nama}.PNG`}
+							lambid={`/lambid/${item.nama}.png`}
 						/>
 					))}
 				</div>
@@ -92,7 +92,7 @@ export default function Structure() {
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
-							lambid={`/lambid/${item.nama}.PNG`}
+							lambid={`/lambid/${item.nama}.png`}
 						/>
 					))}
 				</div>
@@ -106,7 +106,7 @@ export default function Structure() {
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
-							lambid={`/lambid/${item.nama}.PNG`}
+							lambid={`/lambid/${item.nama}.png`}
 						/>
 					))}
 				</div>
@@ -120,7 +120,7 @@ export default function Structure() {
 							alias={item.alias}
 							to={`structure/${item.slug}`}
 							key={index}
-							lambid={`/lambid/${item.nama}.PNG`}
+							lambid={`/lambid/${item.nama}.png`}
 						/>
 					))}
 				</div>

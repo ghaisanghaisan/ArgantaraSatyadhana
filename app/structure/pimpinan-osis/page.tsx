@@ -30,10 +30,20 @@ export default function Structure({ params }: { params: { slug: string } }) {
 				kekuatan yang ditunggangi oleh Wakil Ketua OSIS untuk menghidupkan OSIS
 				SMAN 55 Jakarta.
 			</p>
-			<div className="personCardListWrapper">
-				<div className="personCardList">
-					<PersonCard nama="Muhammad Alfiansyah" jabatan="Ketua OSIS" />
-					<PersonCard nama="Altius Vieddy" jabatan="Wakil Ketua OSIS" />
+			<div>
+				<div className="personCardListWrapper">
+					<div className="personCardList">
+						<PersonCard
+							nama="Muhammad Alfiansyah"
+							jabatan="Ketua OSIS"
+							foto="/struktur/Muhammad Alfiansyah.png"
+						/>
+						<PersonCard
+							nama="Altius Vieddy"
+							jabatan="Wakil Ketua OSIS"
+							foto="/struktur/Altius Vieddy.png"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
